@@ -1,4 +1,4 @@
-module.exports = (req, res, next) => {
+module.exports.admin = (req, res, next) => {
   if (req.user.role == "admin") {
     next();
   } else {

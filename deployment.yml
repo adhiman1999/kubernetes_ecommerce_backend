@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+        app: 
+    spec:
+      containers:
+        - name: nodejs-container
+          image: node-app
+          imagePullPolicy: Never
+          - containerPort: 6500
+      restartPolicy: Never

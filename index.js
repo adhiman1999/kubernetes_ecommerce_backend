@@ -2,6 +2,8 @@ const express = require("express");
 const helmet = require("helmet");
 const db = require("./db");
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 const cookieParser = require("cookie-parser");
 const DB_HOST = process.env.DB_HOST;
 

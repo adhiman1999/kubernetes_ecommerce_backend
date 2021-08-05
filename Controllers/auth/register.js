@@ -13,7 +13,7 @@ module.exports.register = async (req, res) => {
     }
     const user = await new User.create(req.body);
     if (user) {
-      res.json({
+      return res.json({
         success: true,
         message: "Successfully created account",
       });

@@ -1,6 +1,5 @@
 const express = require("express");
-const check = require("express-validator");
-const logout = require("../controllers/auth/logout");
+const { logout } = require("../../Controllers/auth/logout");
 const router = express.Router();
 
 router.get("/", logout);
